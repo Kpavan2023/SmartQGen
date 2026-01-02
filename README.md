@@ -1,13 +1,13 @@
-# Smart AI MCQ Generator — Documentation (Extended)
+# SmartQGen – Smart AI MCQ Generator
 
 **Version:** 1.0.0  
-**Filename:** `README.md`
 
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE) [![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)]()  
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)]()
+[![FastAPI](https://img.shields.io/badge/FastAPI-Backend-teal.svg)]()
+[![React](https://img.shields.io/badge/React-Frontend-blue.svg)]()
 
 ---
-
-## Table of contents
 
 1. [Project summary](#project-summary)
 2. [Quick start (download & run)](#quick-start-download--run)
@@ -24,16 +24,22 @@
 
 ---
 
-## Project summary
+## 📌 Project Summary
 
-**Smart AI MCQ Generator** is an AI-driven system that converts educational material (PDF, DOCX, TXT) into multiple-choice quizzes. Main capabilities:
+**SmartQGen (Smart AI MCQ Generator)** is a full-stack, transformer-driven system that converts educational content (PDF, DOCX, TXT) into high-quality multiple-choice quizzes.
 
-- Generate contextual questions from text (QG model: T5-small + LoRA).  
-- Extract correct answers (QA model: DistilBERT QA head).  
-- Produce plausible distractors (distractor model: T5-small based generator or heuristics).  
-- Provide difficulty & Bloom's taxonomy tagging, explanations, and export (PDF/DOCX).
+### Key Capabilities
+- Transformer-based **question generation** (T5-small + LoRA)
+- Accurate **answer extraction** (DistilBERT QA)
+- Plausible **distractor generation** (T5-based or heuristic fallback)
+- Difficulty & Bloom’s taxonomy tagging
+- Explanations for answers
+- Export quizzes and results to **PDF / DOCX**
+- Modular, production-ready **FastAPI backend**
 
-Primary goals: reproducible local development (VS Code / Kaggle / Colab), modular model placement, and a small production-ready FastAPI backend.
+This project is the **implementation of an IEEE conference paper** titled:
+
+> *Smart AI MCQ Generator: A Transformer-Driven System for Automated Question, Answer, and Distractor Generation*
 
 ---
 
@@ -96,9 +102,7 @@ Access the UI at `http://localhost:5173` (frontend) and backend at `http://127.0
 
 ## Architecture — diagram + explanation
 
-### High-level architecture (Mermaid)
-
-```mermaid
+```
 flowchart LR
   A[Frontend: React (Vite, Tailwind)] -->|REST| B[FastAPI Backend]
   B --> C[QuestionGenerator (QG model: T5-small + LoRA)]
@@ -155,8 +159,7 @@ project/
 │
 ├── .env                      # Environment variables
 ├── package.json             # Node dependencies
-└── README.md               # This file                       # frontend React 
-└── Smart_AI_MCQ_Generator_Documentation.md
+└── README.md               # This file                      
 ```
 
 > Keep `MCQ_MODEL_Check/` inside backend so `local_files_only=True` loads from local disk without hitting HF hub.

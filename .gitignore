@@ -1,0 +1,120 @@
+# ==============================
+# Logs
+# ==============================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ==============================
+# Node.js
+# ==============================
+node_modules/
+dist/
+dist-ssr/
+build/
+.vite/
+
+# ==============================
+# Environment Variables
+# ==============================
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ==============================
+# TypeScript / Vite
+# ==============================
+*.tsbuildinfo
+
+# ==============================
+# Python
+# ==============================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Virtual Environments
+venv/
+.venv/
+ENV/
+
+# ==============================
+# Jupyter / ML Artifacts
+# ==============================
+.ipynb_checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.h5
+*.safetensors
+wandb/
+mlruns/
+
+# ==============================
+# ML Models & Tokenizers (Local Only)
+# ==============================
+*.bin
+*.model
+tokenizer.json
+vocab.txt
+added_tokens.json
+special_tokens_map.json
+generation_config.json
+config.json
+
+# HuggingFace cache / metadata
+__huggingface_repos__.json
+
+# ==============================
+# Backend Generated Files
+# ==============================
+backend/exports/
+backend/temp/
+backend/MCQ_MODEL_Check/
+
+# ==============================
+# IDEs & Editors
+# ==============================
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.iml
+
+# ==============================
+# OS Files
+# ==============================
+.DS_Store
+Thumbs.db
+
+# ==============================
+# Windows / Visual Studio
+# ==============================
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ==============================
+# Temporary / Cache
+# ==============================
+.cache/
+.tmp/
+*.local
+
+# ==============================
+# Tool-specific
+# ==============================
+.bolt/
